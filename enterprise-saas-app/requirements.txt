@@ -1,0 +1,7 @@
+Flask==2.0.3
+SQLAlchemy==1.4.22
+Flask-Migrate==3.1.0
+Flask-RESTful==0.3.9
+python-dotenv==0.19.2
+pytest==6.2.4
+requests==2.26.0
