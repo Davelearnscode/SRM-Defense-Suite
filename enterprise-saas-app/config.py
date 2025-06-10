@@ -1,8 +1,11 @@
 import os
 
 class Config:
-    SECRET_KEY = os.environ.get('SECRET_KEY') or 'a_default_secret_key'
-    SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL') or 'sqlite:///site.db'
+    SECRET_KEY = 'your-key'
+    SQLALCHEMY_DATABASE_URI = 'sqlite:///app.db'
     SQLALCHEMY_TRACK_MODIFICATIONS = False
-    DEBUG = os.environ.get('DEBUG', 'False').lower() in ['true', '1', 't']
-    TESTING = os.environ.get('TESTING', 'False').lower() in ['true', '1', 't']
+    MAIL_SERVER = 'smtp.example.com'
+    MAIL_PORT = 587
+    MAIL_USE_TLS = True
+    MAIL_USERNAME = 'your-email@example.com'
+    MAIL_PASSWORD = 'your-password'

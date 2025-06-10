@@ -1,7 +1,9 @@
-from flask import Blueprint
+from flask import Blueprint, render_template
+from flask_login import login_required, current_user
 
-# Create a blueprint for the routes
 main = Blueprint('main', __name__)
 
-# Import routes here to register them with the blueprint
-from . import example_routes  # Replace with actual route files as needed
+@main.route('/')
+@login_required
+def index():
+    return render_template('index.html', current_user=current_user)
